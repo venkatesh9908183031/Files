@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getvalues()
+        {
+            let s=document.getElementsByName('skill')
+            let mesg=document.getElementById('msg')
+            let result=''
+            for(let i=0;i<s.length;i++)
+            {
+                if(s[i].checked)
+                {
+                result=result+s[i].value +'</br>'
+                }
+            }
+            mesg.innerHTML=result
+        }
+    </script>
+</head>
+<body>
+    skillset:
+    <input type="checkbox" name="skill" value="java" onclick="gatvalues()"/>java
+    <input type="checkbox" name="skill" value="C" onclick="gatvalues()"/>C
+    <input type="checkbox" name="skill" value="C++" onclick="gatvalues()"/>C++
+    <input type="checkbox" name="skill" value="Html"  onclick="gatvalues()"/>Html
+    <input type="checkbox" name="skill" value="angular" onclick="gatvalues()"/>angular
+    <div id="msg"></div>
+</body>
+</html>

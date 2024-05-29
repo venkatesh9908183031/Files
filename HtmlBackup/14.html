@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<script>
+    function fnvalidateform()
+    {
+        let nameE1=document.getElementById('txtname')
+        let emailE1=document.getElementById('emailname')
+        let emailpattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        let ageE1=document.getElementById('agevalue')
+        let age=parseInt(ageE1.value)
+        let genderE1=document.getElementsByName('gender')
+        let cityE1=document.getElementById('ddloptions')
+        if(nameE1.value.length==0)
+        {
+            alert('name is required')
+            nameE1.focus()
+            return false
+        }
+        if(emailE1.value.length==0)
+        {
+            alert('Email is required')
+            emailE1.focus()
+            return false
+        }
+        if(!emailpattern.test(emailE1.value))
+        {
+            alert('Invalid Email')
+            emailE1.focus()
+            return false
+        }
+        if(ageE1.value.length==0)
+        {
+            alert('Age is required')
+            ageE1.focus()
+            return false
+        }
+        if(age<18 || age>50)
+            {
+                alert('Age should be between 18 and 50')
+                ageE1.focus()
+                return false
+            }
+            if(!genderE1[0].checked && !genderE1[1].checked)
+            {
+                alert('gender is required')
+                return false
+            }
+            if(cityE1.value.length==0)
+            {
+                alert('City cannot be empty')
+                cityE1.focus()
+                return false
+            }
+        return true
+    } 
+</script>
+</head>
+<body>
+    <h2>Registeration Form</h2>
+    <form onsubmit="return fnvalidateform()" action="www.google.com/" method="post">
+    Name:<input type="text" id="txtname" name="name"><br>
+    Email: <input type="email" id="emailname" name="email"><br>
+    Age: <input type="number" id="agevalue" name="age"><br>
+    Gender: <input type="radio" name="gender" value="male">male
+    <input type="radio" name="gender"  value="female">female
+    <br>
+    <select  id="ddloptions">
+        <option value="">---select---</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="pune">Pune</option>
+        <option value="Vijayawada">Vijayawada</option>
+    </select><br>
+    <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

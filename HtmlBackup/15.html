@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Document</title>
+ <script>
+    function fnprint()
+    {
+    var intervel=setInterval(()=>{
+        console.log('Hello Venkey')
+    },1000)
+    setTimeout(()=>{
+        clearInterval(intervel)
+        console.log('Execution Sopped')
+    },10000)
+    }
+ </script>
+</head>
+<body onload="fnprint()">
+    
+</body>
+</html>

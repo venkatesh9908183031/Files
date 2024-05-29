@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getCategory()
+        {
+            let data=document.getElementById('ddloption').value
+            if(data=="")
+            {
+                document.getElementById('msg').innerHTML=''
+            }
+            else
+            {
+                document.getElementById('msg').innerHTML='You Have Selected '+data+' As Your Favorite'
+            }
+        }
+    </script>
+</head>
+<body>
+    <select id="ddloption" onchange="getCategory()">
+        <option value="">---Select---</option>
+        <option value="food">food</option>
+        <option value="sport">sports</option>
+        <option value="music">music</option>
+        <option value="movies">movies</option>
+    </select>
+    <label id="msg"></label>
+</body>
+</html>

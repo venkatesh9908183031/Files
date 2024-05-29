@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+    <script>
+        function bgimage()
+        {
+            let img=document.getElementById('d1')
+            img.style.backgroundImage='url(https://th.bing.com/th?id=OIP.5JOmFuIk6NBgsbjVQYFNOQHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2)'
+        }
+        function getoriginal()
+        {
+            let img=document.getElementById('d1')
+            img.style.backgroundImage='url(https://th.bing.com/th?id=OIP.tGq2V-jYrBmm_r0qgA910QHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2)'
+        }
+    </script>
+</head>
+<body>
+    <div id="d1" onmouseover="bgimang()" onmouseout="getoriginal()" style="background-image:url(https://th.bing.com/th?id=OIP.tGq2V-jYrBmm_r0qgA910QHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2)"></div>
+</body>
+</html>

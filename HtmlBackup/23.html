@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<script>
+    function deletearecord()
+        {
+            var xhr=new XMLHttpRequest()
+            xhr.open('delete','https://reqres.in/api/users/2')
+            xhr.onreadystatechange=()=>
+            {
+                if(xhr.readyState==4 && xhr.status==204)
+                {
+                    console.log('User record is deleted successfully')
+                }
+            }
+            xhr.send();    
+        }
+</script>
+</head>
+<body onload="deletearecord()">
+    
+</body>
+</html>

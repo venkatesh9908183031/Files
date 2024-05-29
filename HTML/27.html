@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Document</title>
+ <script>
+    function fnputtData()
+    {
+        var data={first_name:'Test',last_name:'Test',email:'test@gmail.com'};
+        fetch(`https://reqres.in/api/users/5`,{
+            method:'PUT',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(data)
+        }).then(res=>{
+            if(res.status==200)
+            {
+                console.log('Record Updated Successfully!')
+            }
+            else{
+                console.log('Something Went Wrong!')
+            }
+        })
+    }
+ </script>
+</head>
+<body onload="fnputtData()">
+    
+</body>
+</html>

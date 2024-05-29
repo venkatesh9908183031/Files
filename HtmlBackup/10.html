@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getcity()
+        {
+            let city=document.getElementById('citylist')
+            let div=document.getElementById('d1')
+            if(city.value=='others')
+            {
+                div.style.display='inline'
+                // div.style.visibility='inline'
+
+            }
+            else{
+                div.style.display='none'
+                // div.style.visibility='hidden'
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <select  id="citylist" onchange="getcity()">
+        <option value="">--select--</option>
+        <option value="Vijayawada">Vijayawada</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Pune">Pune</option>
+        <option value="Delhi">Delhi</option>
+        <option value="others">others</option>
+    </select>
+    <div id="d1" style="display: none">
+        <!-- <div id="d1" style="visibility:hidden;"> -->
+        Enter Your City: <input type="text" id="others">
+    </div>
+</body>
+</html>

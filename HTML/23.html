@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+     <script>
+        function fndemo()
+            {
+                var skill=document.getElementsByName('skill');
+                var result=''
+                for(var i=0;i<skill.length;i++)
+                {
+                    if(skill[i].checked)
+                    {
+                        result+=skill[i].value+","
+                    }
+                }
+                document.getElementById('lbl').innerHTML=result
+            }
+        
+     </script>
+</head>
+<body>
+    Skills:
+    <input type="checkbox" name="skill" value="C"/>C
+    <input type="checkbox" name="skill" value="C++"/>C++
+    <input type="checkbox" name="skill" value="JAVA"/>JAVA
+    <input type="checkbox" name="skill" value="SQL"/>SQL
+    <input type="checkbox" name="skill" value="PYTHON"/>PYTHON
+    <input type="checkbox" name="skill" value="CSS"/>CSS
+    <br/>
+    <button onclick="fndemo()">click me</button>
+    <lable id="lbl"></lable>
+</body>
+</html>

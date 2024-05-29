@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getGender()
+        {
+            let genoption=document.getElementsByName('gender')
+            let lbl=document.getElementById('msg')
+            if(genoption[0].checked)
+            {
+                lbl.innerHTML=genoption[0].value+' is selected'
+            }
+            else if(genoption[1].checked)
+            {
+                lbl.innerHTML=genoption[1].value+' is selected'
+            }
+        }
+    </script>
+</head>
+<body>
+    Gender:
+    <input type="radio" name="gender" value="male" onclick="getGender()">male
+    <input type="radio" name="gender" value="female" onclick="getGender()">female <br>
+    <label id="msg"></label>
+    
+</body>
+</html>

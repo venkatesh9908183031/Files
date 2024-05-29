@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hoverEffect(id)
+        {
+            let hover=document.getElementById(id)
+            hover.style.backgroundColor='red'
+            hover.style.color='white'
+        }
+        function getOriginal(id)
+        {
+            let hover=document.getElementById(id)
+            hover.style.backgroundColor='white'
+            hover.style.color='black'
+        }
+    </script>
+</head>
+<body>
+    <h1 id="head1" onmouseover="hoverEffect(this.id)" onmouseout="getOriginal(this.id)">Sample Text</h1>
+    <h1 id="head2" onmouseover="hoverEffect(this.id)" onmouseout="getOriginal(this.id)">Sample Text</h1>
+    <h1 id="head3" onmouseover="hoverEffect(this.id)" onmouseout="getOriginal(this.id)">Sample Text</h1>
+
+</body>
+</html>

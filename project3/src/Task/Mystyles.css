@@ -1,0 +1,9 @@
+.image-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  .image {
+    margin-right: 10px; /* Add space between images */
+  }
+  

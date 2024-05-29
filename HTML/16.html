@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Document</title>
+ <script type="text/javascript">
+  
+        function print()
+        {
+            var users=[
+                {id:1,name:'Steve',location:'Mumbai'},
+                {id:2,name:'Jhon',location:'Delhi'},
+                {id:3,name:'Harry',location:'Pune'},
+                {id:4,name:'Peter',location:'Chennai'},
+                {id:5,name:'James',location:'Hyderabad'}
+            ]
+            document.write("<table border='1' bgcolor='yellow'>")
+                document.write("<tr><th>Id</th><th>Name</th><th>Location</th></tr>")
+                for(var i=0;i<users.length;i++)
+                {
+                    document.write('<tr>')
+                        document.write(`<td>${users[i].id}</td>`)
+                        document.write(`<td>${users[i].name}</td>`)
+                        document.write(`<td>${users[i].location}</td>`)
+                    document.write('</tr>')
+                }
+            document.write("</table>")
+        }
+ </script>
+</head>
+<body  onload="print()">
+    
+</body>
+</html>

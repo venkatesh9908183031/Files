@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script type="text/javascript">
+    function fnadd()
+    {
+        var v1=parseInt(document.getElementById('v1').value)
+        var v1=parseInt(document.getElementById('v1').value)
+        var result=v1+v2
+        console.log(result)
+        document.getElementById('lblResult').innerHTML="Sum:" +result
+    }
+  </script>
+</head>
+<body>
+    value-1=<input type="text" id="v1" value="0" onkeypress="fnadd()"/><br/>
+    value-2=<input type="text" id="v2" value="0" onkeypress="fnadd()"/><br/>
+    <label id="lblResult"></label>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function putdata()
+        {
+            var data={
+                id:'2',
+                first_name:'Venkatesh',
+                last_name:'Kota Konda',
+                email:'venkatesh@gmail.com'
+            }
+            fetch('https://reqres.in/api/users/2',{
+                method:'put',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify(data)
+            }).then(result=>{
+                console.log(result.status)
+                if(result.status==200)
+            {
+                alert('your record is updated successfully!')
+            }
+            // }).then(data=>{
+            //     console.log(data)
+            })
+        
+        }
+    </script>
+</head>
+<body onload="putdata()">
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<script>
+    function putdata()
+    {
+        var data={
+            id:2,
+            first_name:'Venkatesh',
+            last_name:'Kota Konda',
+            email:'venkatesh@gmail.com'
+        }
+        var xhr=new XMLHttpRequest()
+        xhr.open('put','https://reqres.in/api/users/2')
+        xhr.setRequestHeader('Content-Type','application/json')
+        xhr.onreadystatechange=()=>
+        {
+            if(xhr.readyState==4 && xhr.status==200)
+            {
+                console.log('user record updated successfully')
+            }
+        }
+        xhr.send(JSON.stringify(data))
+    }
+</script>
+</head>
+<body onload="putdata()">
+    
+</body>
+</html>

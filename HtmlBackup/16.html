@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function getData()
+        {
+            fetch('https://reqres.in/api/users',{
+                method:"GET"
+            }).then(result=>{
+                console.log(result.status)
+                return result.json()
+            }).then(res=>{
+                console.log(res.data)
+                document.write("<table border='1'>")
+                    document.write("<tr><th>Id</th><th>Name</th><th>email</th><th>avatar</th></tr>")
+                    for(var i=0;i<res.data.length;i++)
+                    {
+                        document.write('<tr>')
+                            document.write('<td>'+res.data[i].id+'</td>')
+                            document.write('<td>'+res.data[i].first_name+''+res.data[i].last_name+'</td>')
+                            document.write('<td>'+res.data[i].email+'</td>')
+                            document.write('<td>'+"<img src='"+res.data[i].avatar+"'/>"+'</td>')
+                    }
+                    document.write('</table>')
+            }).catch(err=>{
+                console.log('error occured',err)
+            })
+        }
+    </script>
+</head>
+<body onload="getData()">
+    
+</body>
+</html>

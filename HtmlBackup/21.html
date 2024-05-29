@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<script>
+    function postdata()
+    {
+        var data={
+            first_name:'Venkatesh',
+            last_name:'Kota Konda',
+            email:'venkatesh@gmail.com'
+        }
+        var xhr=new XMLHttpRequest()
+        xhr.open('post','https://reqres.in/api/users')
+        xhr.setRequestHeader('Content-Type','application/json')
+        xhr.onreadystatechange=()=>
+        {
+            if(xhr.readyState==4 && xhr.status==201)
+            {
+                console.log('user record inserted successfully')
+            }
+        }
+        xhr.send(JSON.stringify(data))
+    }
+</script>
+</head>
+<body onload="postdata()">
+    
+</body>
+</html>

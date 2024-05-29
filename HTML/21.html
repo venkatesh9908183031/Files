@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script>
+    function fnConvertUpper()
+    {
+        var element=document.getElementById('id');
+        element.value=element.value.toUpperCase();
+    }
+  </script>
+</head>
+<body>
+   Name: <input type="text" name="name" id="name" onkeyup="fnConvertUpper(this.id)"/><br/>
+   College Name: <input type="text" name="college" id="college" onkeyup="fnConvertUpper(this.id)"/><br/>
+
+</body>
+</html>

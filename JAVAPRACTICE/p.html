@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fdt()
+        {
+            let dt=new Date()
+            alert("current date "+dt.getDate()+"-"+(dt.getMonth()+1)+"-"+dt.getFullYear())
+            console.log("current date "+dt.getDate()+"-"+(dt.getMonth()+1)+"-"+dt.getFullYear())
+            document.write("current date "+dt.getDate()+"-"+(dt.getMonth()+1)+"-"+dt.getFullYear())
+
+        }
+    </script>
+</head>
+<body>
+    <button type="button" style="background-color: rgb(26, 189, 189); color: rgb(255, 251, 240);" ondblclick="fdt()">Date</button>
+    
+</body>
+</html>

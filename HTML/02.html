@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#5f477d">
+    <form>
+        Name: <input type="text" id="name" name="name" required/>
+        <br/>
+        <br/>
+        Password: <input type="password" id="pwd" name="pwd"/>
+        <br/>
+        <br/>
+        Age: <input type="number" id="age" name="age"/>
+        <br/>
+        <br/>
+        DOB: <input type="date" id="dob" name="dob"/>
+        <br/>
+        <br/>
+        Fav Colour: <input type="color" name="color"/>
+        <br/>
+        <br/>
+        Email:<input type="email" name="email"/>
+        <br/>
+        <br/>
+        Mobile:<input type="number" name="Mobile" maxlength="10"/>
+        <br/>
+        <br/>
+        Nationality:<input type="text" name="Nationality" value="Indian" readonly disabled/>
+        <br/>
+        <br/>
+        Gender:
+        <input type="radio" name="Gender" value="Male" />Male
+        <input type="radio" name="Gender" value="Female"/>Female
+        <br/>
+        <br/>
+        Skills:
+        <input type="checkbox" name="Skills" value="c"/>C
+        <input type="checkbox" name="Skills" value="c++"/>C++
+        <input type="checkbox" name="Skills" value="JAVA"/>JAVA
+        <input type="checkbox" name="Skills" value="Python"/>Python
+        <br/>
+        <br/>
+        City:
+        <select name="City" multiple>
+            <option value="Hyd">Hyderabad</option>
+            <option value="Mum">Mumbai</option>
+            <option value="Chi">Chittoor</option>
+            <option value="Che">Chennai</option>
+            <option value="Ana">Ananthapur</option>
+            <option value="Mpl" selected>Madanapalle</option>   
+        </select>
+        <br/>
+        <br/>
+        Feedback:
+        <textarea name="Feedback" cols="36" rows="6"></textarea>
+        <br/>
+        <br/>
+        <input type="reset"/>
+        <input type="submit"/>
+        <input type="button" value="Click me"/>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+        <button type="button">Click Me</button>
+    </form>
+</body>
+</html>

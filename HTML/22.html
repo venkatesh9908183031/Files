@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+    function fnGetGender()
+    {
+        var gender=document.getElementsByName('gender')
+        var lbl=document.getElementById('lblMsg')
+        if(gender[0].checked)
+        {
+            lbl.innerHTML=gender[0].value+" is Selected"
+        }
+        else if(gender[1].checked)
+        {
+            lbl.innerHTML=gender[1].value+" is Selected"
+        }
+    }
+</script>
+</head>
+<body>
+    Gender:
+    <input type="radio" name="Gender" value="male" onclick="fnGetGender()"/>Male
+    <input type="radio" name="Gender" value="female" onclick="fnGetGender()"/>Female<br/>
+    <label id="lblMsg"></label>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+     <script>
+           function fnpostData()
+                {
+        var data={first_name:'Test',last_name:'Test',email:'test@gmail.com'};
+        fetch(`https://reqres.in/api/users`,{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(data)
+        }).then(res=>{
+            if(res.status==201)
+            {
+                console.log('Record Saved Successfully!')
+            }
+            else{
+                console.log('Something Went Wrong!')
+            }
+        })
+    }
+    function fnputData()
+    {
+        var data={first_name:'Test',last_name:'Test',email:'test@gmail.com'};
+        fetch(`https://reqres.in/api/users/5`,{
+            method:'PUT',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(data)
+        }).then(res=>{
+            if(res.status==200)
+            {
+                console.log('Record Updated Successfully!')
+            }
+            else{
+                console.log('Something Went Wrong!')
+            }
+        })
+    }
+    function fnDeleteData()
+    {
+        fetch(`https://reqres.in/api/users`,{
+            method:'DELETE',
+        }).then(res=>{
+            if(res.status==204)
+            {
+                console.log('Record Delted Successfully!')
+            }
+            else{
+                console.log('Something Went Wrong!')
+            }
+        })
+    }
+    function fngetdata()
+        {
+            fetch(`https://reqres.in/api/users/`,{
+                method:'GET'
+            }).then(res=>{return res.json()})
+            .then(result=>{
+                console.log(result.data)
+            })
+        }
+    function fnexit()
+        {
+            window.close()
+        }
+     </script>
+</head>
+<body>
+    <button onclick="fnpostData()">1.Add User</button><br>
+    <button onclick="fnputData()">2.Update User</button><br>
+    <button onclick="fnDeleteData()">3.Delete Data</button><br>
+    <button onclick="fngetdata()">4.Get All Users</button><br>
+    <button onclick="fnexit()">0.Exit</button>
+    <p>Enter User Choice:</p>
+</body>
+</html>

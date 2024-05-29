@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getcity(id)
+        {
+            let ddlcity=document.getElementById(id)
+            let lbl=document.getElementById('d1')
+            if(ddlcity.value.length!=0)
+            {
+                lbl.innerHTML='you are from '+ddlcity.value
+            }
+            else{
+                lbl.innerHTML=''
+            }
+        }
+    </script>
+</head>
+<body>
+    <select  id="citylist" onchange="getcity(this.id)">
+        <option value="">--select--</option>
+        <option value="Vijayawada">Vijayawada</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Pune">Pune</option>
+        <option value="Delhi">Delhi</option>
+
+    </select>
+    <label id="d1"></label>
+</body>
+</html>

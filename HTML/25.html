@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script>
+    function fngetdata()
+        {
+            var id=parseInt(prompt('Enter Id:'))
+            fetch(`https://reqres.in/api/users/${id}`,{
+                method:'GET'
+            }).then(res=>{return res.json()})
+            .then(result=>{
+                console.log(result.data)
+            })
+        }
+  </script>
+</head>
+<body onload="fngetdata()">
+    
+</body>
+</html>
